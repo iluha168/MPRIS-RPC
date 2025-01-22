@@ -1,0 +1,74 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@std/async@*": "1.0.9",
+    "jsr:@std/async@^1.0.9": "1.0.9",
+    "jsr:@std/dotenv@*": "0.225.3",
+    "jsr:@std/dotenv@~0.225.3": "0.225.3",
+    "jsr:@std/encoding@*": "1.0.6",
+    "jsr:@std/encoding@^1.0.6": "1.0.6",
+    "jsr:@takker/md5@*": "0.1.0",
+    "jsr:@takker/md5@0.1": "0.1.0",
+    "npm:zod@^3.24.1": "3.24.1"
+  },
+  "jsr": {
+    "@std/async@1.0.9": {
+      "integrity": "c6472fd0623b3f3daae023cdf7ca5535e1b721dfbf376562c0c12b3fb4867f91"
+    },
+    "@std/dotenv@0.225.3": {
+      "integrity": "a95e5b812c27b0854c52acbae215856d9cce9d4bbf774d938c51d212711e8d4a"
+    },
+    "@std/encoding@1.0.6": {
+      "integrity": "ca87122c196e8831737d9547acf001766618e78cd8c33920776c7f5885546069"
+    },
+    "@takker/md5@0.1.0": {
+      "integrity": "4c423d8247aadf7bcb1eb83c727bf28c05c21906e916517395d00aa157b6eae0"
+    }
+  },
+  "npm": {
+    "zod@3.24.1": {
+      "integrity": "sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A=="
+    }
+  },
+  "remote": {
+    "https://deno.land/x/discord_rpc@0.3.2/deps.ts": "3ae1770c0e75cc18ce4943f8c4f30595b51d7949c8f9297c34536fcfbd1ad584",
+    "https://deno.land/x/discord_rpc@0.3.2/mod.ts": "60900c6d14f21eaebb56babb26f7bdd663ee2be2fce9b108f8531748b9776e17",
+    "https://deno.land/x/discord_rpc@0.3.2/src/client.ts": "8327f1ad0a0f5941001a86a17dcfd37132b48f0e82290b215fd6d102d7f8acfe",
+    "https://deno.land/x/discord_rpc@0.3.2/src/conn.ts": "9fd25db06e2d70951beb4700b333347b649fd35feb3295ceea00e19fe0348d91",
+    "https://deno.land/x/discord_rpc@0.3.2/src/types.ts": "0ea6155131c566f2df6dadf0d8db20364b50d22c7bd3a46e2a80157ccebcdb25",
+    "https://deno.land/x/discord_rpc@0.3.2/src/util.ts": "27cf529418bb0c66d830d31895938367e344785e277f1da18ce09bd11dec5c39",
+    "https://deno.land/x/namedpipe@0.1.2/client.ts": "21d3fdd0815f969bff33363e9743dc0f32d750cce32d47d73f4d0b16b4c51201",
+    "https://deno.land/x/namedpipe@0.1.2/deps.ts": "887765175a2b941907e5a61edb62e1f4fb91cae13c42b6134f4863e9d9c73ba8",
+    "https://deno.land/x/namedpipe@0.1.2/mod.ts": "865f345ff24605453bc6d89d780c0785eb8c75345a01eef6bf66b4fb578e67b9",
+    "https://deno.land/x/zod@v3.23.8/ZodError.ts": "528da200fbe995157b9ae91498b103c4ef482217a5c086249507ac850bd78f52",
+    "https://deno.land/x/zod@v3.23.8/errors.ts": "5285922d2be9700cc0c70c95e4858952b07ae193aa0224be3cbd5cd5567eabef",
+    "https://deno.land/x/zod@v3.23.8/external.ts": "a6cfbd61e9e097d5f42f8a7ed6f92f93f51ff927d29c9fbaec04f03cbce130fe",
+    "https://deno.land/x/zod@v3.23.8/helpers/enumUtil.ts": "54efc393cc9860e687d8b81ff52e980def00fa67377ad0bf8b3104f8a5bf698c",
+    "https://deno.land/x/zod@v3.23.8/helpers/errorUtil.ts": "7a77328240be7b847af6de9189963bd9f79cab32bbc61502a9db4fe6683e2ea7",
+    "https://deno.land/x/zod@v3.23.8/helpers/parseUtil.ts": "c14814d167cc286972b6e094df88d7d982572a08424b7cd50f862036b6fcaa77",
+    "https://deno.land/x/zod@v3.23.8/helpers/partialUtil.ts": "998c2fe79795257d4d1cf10361e74492f3b7d852f61057c7c08ac0a46488b7e7",
+    "https://deno.land/x/zod@v3.23.8/helpers/typeAliases.ts": "0fda31a063c6736fc3cf9090dd94865c811dfff4f3cb8707b932bf937c6f2c3e",
+    "https://deno.land/x/zod@v3.23.8/helpers/util.ts": "30c273131661ca5dc973f2cfb196fa23caf3a43e224cdde7a683b72e101a31fc",
+    "https://deno.land/x/zod@v3.23.8/index.ts": "d27aabd973613985574bc31f39e45cb5d856aa122ef094a9f38a463b8ef1a268",
+    "https://deno.land/x/zod@v3.23.8/locales/en.ts": "a7a25cd23563ccb5e0eed214d9b31846305ddbcdb9c5c8f508b108943366ab4c",
+    "https://deno.land/x/zod@v3.23.8/mod.ts": "ec6e2b1255c1a350b80188f97bd0a6bac45801bb46fc48f50b9763aa66046039",
+    "https://deno.land/x/zod@v3.23.8/types.ts": "1b172c90782b1eaa837100ebb6abd726d79d6c1ec336350c8e851e0fd706bf5c",
+    "https://raw.githubusercontent.com/DjDeveloperr/deno_win32/0.4.1/util.ts": "0f846e01a976601ad4c9839b72df8aaddc65685a16bc658a1bb914e21323e231",
+    "https://win32.deno.dev/0.4.1/Foundation": "4269309575d542c58cc9889a78e7f02d98a0af78f74bcaaf0c7bff52dddb7146",
+    "https://win32.deno.dev/0.4.1/Storage.FileSystem": "6acf3f10fa7b153cf0dc3bdb184a305c67dab28bcca25ec8726b65623f234fa3",
+    "https://win32.deno.dev/0.4.1/System.Diagnostics.Debug": "941ea74c410cf57b05eb9fa6c1ccccf57aee633ffb8a18e41a5496ecbd8b5de8",
+    "https://win32.deno.dev/0.4.1/System.IO": "9c26d0b15a5e1ec5f1765af18b5983ebd920890c52ede231a625384b6ef7a2c4",
+    "https://win32.deno.dev/0.4.1/System.Pipes": "7a1b9870018298d069908e51635f8aa63d1c2cfcdab55e440b50cee04cef87a0",
+    "https://win32.deno.dev/0.4.1/error": "548aa1b5f09f1f39193ce930583180f5e9d7062b2b06a7eea735a4b9f4c45e40",
+    "https://win32.deno.dev/0.4.1/overlapped": "917c33c6d55ee8fb842c764fdd754cc547601a5abe68ad6431043da0768d2478"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/async@^1.0.9",
+      "jsr:@std/dotenv@~0.225.3",
+      "jsr:@std/encoding@^1.0.6",
+      "jsr:@takker/md5@0.1",
+      "npm:zod@^3.24.1"
+    ]
+  }
+}

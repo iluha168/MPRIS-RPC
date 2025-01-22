@@ -1,0 +1,13 @@
+{
+	"imports": {
+		"@std/async": "jsr:@std/async@^1.0.9",
+		"@std/dotenv": "jsr:@std/dotenv@^0.225.3",
+		"@std/encoding": "jsr:@std/encoding@^1.0.6",
+		"@takker/md5": "jsr:@takker/md5@^0.1.0",
+		"zod": "npm:zod@^3.24.1"
+	},
+	"tasks": {
+		"fmt": "deno fmt --single-quote --indent-width 4 --no-semicolons --use-tabs",
+		"fmt-watch": "deno task fmt --watch"
+	}
+}

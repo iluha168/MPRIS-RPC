@@ -7,7 +7,7 @@
 		"zod": "npm:zod@^3.24.1"
 	},
 	"tasks": {
-		"fmt": "deno fmt --single-quote --indent-width 4 --no-semicolons --use-tabs",
+		"fmt": "deno fmt --single-quote --indent-width 4 --no-semicolons --use-tabs --ignore=README.md",
 		"fmt-watch": "deno task fmt --watch"
 	}
 }

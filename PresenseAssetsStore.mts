@@ -60,16 +60,24 @@ type DiscordAssetUpload = {
 
 const log = console.debug.bind(null, '[assets]')
 
-export const cache = new Map<DiscordAsset['name'], DiscordAsset['id']>(
-	(await api<DiscordAsset[]>('GET', '?nocache=true'))
-		.map((asset) => [asset.name, asset.id]),
-)
+export const cache = new Map<DiscordAsset['name'], DiscordAsset['id']>()
+
+export async function refreshCache() {
+	cache.clear()
+	for (const asset of await api<DiscordAsset[]>('GET', '?nocache=true')) {
+		if (cache.has(asset.name)) {
+			await remove(asset.name, asset.id)
+		}
+		cache.set(asset.name, asset.id)
+	}
+}
+
+await refreshCache()
 log('Initialized with cache size', cache.size)
 
 export async function upload(
 	filePath: string,
 ): Promise<DiscordAsset['id'] | null> {
-	log('Upload', filePath)
 	const pngBytes = await Deno.readFile(filePath).catch(() => null)
 	if (pngBytes === null) {
 		log('Failed to read', filePath)
@@ -92,7 +100,6 @@ export async function upload(
 
 	const existingID = cache.get(hash)
 	if (existingID) {
-		log('Asset already uploaded', existingID)
 		return existingID
 	}
 
@@ -107,24 +114,28 @@ export async function upload(
 		}
 	}
 
-	log('Fetching...')
-	const asset = await api<DiscordAsset, DiscordAssetUpload>('POST', '', {
-		image: fileData,
-		name: hash,
-		type: '1',
-	})
+	try {
+		const asset = await api<DiscordAsset, DiscordAssetUpload>('POST', '', {
+			image: fileData,
+			name: hash,
+			type: '1',
+		})
 
-	cache.set(asset.name, asset.id)
-	log('Uploaded, cache size is now', cache.size)
-	return asset.id
+		cache.set(asset.name, asset.id)
+		log(`Uploaded ${filePath}; Cache size is now ${cache.size}`)
+		return asset.id
+	} catch {
+		log(`Upload of ${filePath} failed; Cache reinvalidated`)
+		await refreshCache()
+		return upload(filePath)
+	}
 }
 
 export async function remove(
 	name: DiscordAsset['name'],
 	id: DiscordAsset['id'],
 ) {
-	log('Remove', id)
 	await api('DELETE', '/' + id)
 	cache.delete(name)
-	log('Removed', id, 'Cache size is now', cache.size)
+	log(`Removed ${id}; Cache size is now ${cache.size}`)
 }

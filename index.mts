@@ -50,8 +50,6 @@ const markMetaDirty = debounce(async () => {
 	if (albumAssetID === null) {
 		return removeActivity()
 	}
-
-	console.log(meta)
 	const t = Date.now()
 
 	await rpc.setActivity({
